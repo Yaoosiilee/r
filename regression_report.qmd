@@ -1,0 +1,45 @@
+---
+title: "Untitled"
+format: html
+editor: visual
+toc: true
+  float_toc: true
+---
+
+# Doing basic analysis
+
+## Reading mtcar data
+
+```{r}
+data <- mtcars
+```
+
+## show summary statistics of mt cars
+
+```{r}
+summary(mtcars)
+```
+
+## draw pairs graph from mtcars
+
+```{r}
+pairs(mtcars)
+```
+
+## draw histogram of mpg in mtcars
+
+```{r}
+hist(mtcars$mpg)
+```
+
+## build a linear model that explain mpg by wt and hp
+
+```{r}
+m1 <- lm(mpg ~ wt + hp, data = data)
+```
+
+## show model result
+
+```{r}
+summary(m1)
+```
